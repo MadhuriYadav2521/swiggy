@@ -280,29 +280,108 @@
 .footer-section{
     width: 100%;
     /* height: 50vh; */
-    padding: 25px;
+    padding: 70px;
     background-color: black;
 }
 .primary-info{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border: 1px solid salmon;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 30px;
 }
-.primary-info-item{
-    width: 25%;
-    border: 1px solid white;
+.f-info-item{
+    width: 20%;
+    /* border: 1px solid white; */
 }
 .f-title{
     width: 100%;
-    text-align: center;
+    font-size: 0.95em;
     color: gray;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
-.primary-info-item li{
+.f-info-item li{
+    color: white;
+    list-style: none;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+    text-align: start;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+}
+.f-info-item li:hover{
+    font-weight: bold;
+}
+.primary-info .f-info-item:nth-child(3){
+    width: 30%;
+}
+.f-img{
+    width: 80%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.f-img:hover{
+    transform: scale(1.05);
+}
+.f-img img{
+    width: 100%;
+}
+.secondary-info{
+    width: 100%;
+    margin-top: 20px;
+}
+.si-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+    
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px ;
+    align-items: center;
+}
+.f-logo{
+    width: 12%;
+    /* border: 1px solid salmon; */
+}
+.f-logo img{
+    width: 100%;
+}
+.copyright{
+    width: 30%;
+    /* border: 1px solid salmon; */
+    text-align: center;
     color: white;
 }
-
-
+.copyright h3{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.f-icon{
+    width: 20%;
+    /* border: 1px solid salmon; */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 25px;
+    align-items: center;
+}
+.icon{
+    width: 100%;
+}
+.icon i{
+    width: 100%;
+}
 
 
 
