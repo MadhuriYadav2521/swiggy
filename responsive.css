@@ -2,6 +2,11 @@
     html {
         font-size: 60%;
     }
+    .sp-container {
+        width: 75%;
+        margin: 6.7% auto 0rem auto;
+        /* border: 1px solid black; */
+    }
 }
 
 @media screen and (max-width:1101px) {
