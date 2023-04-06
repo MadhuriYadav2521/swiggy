@@ -19,6 +19,22 @@
         font-size: 50%;
     }
 }
+@media screen and (max-width:956px){
+    html{
+        font-size: 50%;
+    }
+    .search-section button{
+        font-size: 1.3rem;
+        color: #5f6376;
+        padding: 1.5rem 1rem;
+        border: none;
+        background-color: #fff;
+        outline: none;
+        width: 24%;
+        cursor: pointer;
+        margin-right: .5rem;
+    }
+}
 @media screen and (max-width:920px){
     html{
         font-size: 48%;
@@ -60,9 +76,23 @@
     .price{
         width: 40%;
     }
+    .search-section a{
+        font-size: 1.3rem;
+    }
+    .content-3 .big-txt{
+        font-size: 3.2rem;
+    }
 }
 @media screen and (max-width:652px){
     html{
         font-size: 35%;
+    }
+}
+@media screen and (max-width:630px){
+    html{
+        font-size: 35%;
+    }
+    .content-3 .big-txt{
+        font-size: 3rem;
     }
 }
