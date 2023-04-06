@@ -1,29 +1,33 @@
-@media screen and (max-width:1237px){
-    html{
+@media screen and (max-width:1237px) {
+    html {
         font-size: 60%;
     }
 }
-@media screen and (max-width:1101px){
-    html{
+
+@media screen and (max-width:1101px) {
+    html {
         font-size: 56%;
     }
 }
-@media screen and (max-width:1020px){
-    html{
+
+@media screen and (max-width:1020px) {
+    html {
         font-size: 53%;
     }
 }
 
-@media screen and (max-width:998px){
-    html{
+@media screen and (max-width:998px) {
+    html {
         font-size: 50%;
     }
 }
-@media screen and (max-width:956px){
-    html{
+
+@media screen and (max-width:956px) {
+    html {
         font-size: 50%;
     }
-    .search-section button{
+
+    .search-section button {
         font-size: 1.3rem;
         color: #5f6376;
         padding: 1.5rem 1rem;
@@ -35,64 +39,87 @@
         margin-right: .5rem;
     }
 }
-@media screen and (max-width:920px){
-    html{
+
+@media screen and (max-width:920px) {
+    html {
         font-size: 48%;
     }
 }
-@media screen and (max-width:884px){
-    html{
+
+@media screen and (max-width:884px) {
+    html {
         font-size: 45%;
     }
 }
-@media screen and (max-width:856px){
-    html{
+
+@media screen and (max-width:856px) {
+    html {
         font-size: 43%;
     }
 }
-@media screen and (max-width:793px){
-    html{
+
+@media screen and (max-width:793px) {
+    html {
         font-size: 40%;
     }
 }
-@media screen and (max-width:768px){
-    html{
+
+@media screen and (max-width:768px) {
+    html {
         font-size: 39%;
     }
 }
-@media screen and (max-width:712px){
-    html{
+
+@media screen and (max-width:712px) {
+    html {
         font-size: 39%;
     }
-    .right-product-navbar{
+
+    .right-product-navbar {
         width: 70%;
     }
-    .rating{
+
+    .rating {
         width: 20%;
     }
-    .time{
+
+    .time {
         width: 30%;
     }
-    .price{
+
+    .price {
         width: 40%;
     }
-    .search-section a{
+
+    .search-section a {
         font-size: 1.3rem;
     }
-    .content-3 .big-txt{
+
+    .content-3 .big-txt {
         font-size: 3.2rem;
     }
+    
+    .nav-state {
+        width: auto;
+    }
 }
-@media screen and (max-width:652px){
-    html{
+
+@media screen and (max-width:652px) {
+    html {
         font-size: 35%;
     }
 }
-@media screen and (max-width:630px){
-    html{
+
+@media screen and (max-width:630px) {
+    html {
         font-size: 35%;
     }
-    .content-3 .big-txt{
+
+    .content-3 .big-txt {
         font-size: 3rem;
+    }
+
+    .nav-state {
+        width: auto;
     }
 }
