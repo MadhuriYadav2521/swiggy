@@ -1360,7 +1360,7 @@ sup {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: auto; */
+    margin-bottom: 3rem;
 }
 .l-header-left{
     width: 70%;
@@ -1385,6 +1385,11 @@ sup {
     color: #fc8019;
     letter-spacing: 0.02rem;
 }
+.l-header-left hr{
+    width: 10%;
+    border: 1px solid black;
+    margin-top: 2rem;
+}
 .submit-btn{
     width: 100%;
     margin-bottom: 1rem;
@@ -1396,12 +1401,11 @@ sup {
     display: inline-block;
     text-align: center;
     border: none;
-    line-height: 50px;
-    font-size: 14px;
+    line-height: 5rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    height: 50px;
+    height: 5rem;
     padding: 0 2rem;
-    color: #fc8019;
     letter-spacing: 0;
     color: #fff;
     background-color: #fc8019;
@@ -1410,22 +1414,42 @@ sup {
     margin-top: 1.5rem;
 
 }
-
-.login-inputs input{
-    border: 1px solid #d4d5d9;
+.login-inputs{
+    position: relative;
+}
+.input{
+    border: 1px solid lightgray;
     padding: 0;
     display: block;
     position: relative;
     transform: translateZ(0);
     width: 100%;
-    padding: 2rem ;
-    font-size: 1.3rem;
+    padding: 2rem 2rem 2rem 1rem;
+    font-size: 2rem;
     outline: none;
+    color: lightslategray;
 }
 .login-inputs{
     width: 100%;
     /* margin-bottom: 2rem; */
     /* margin-top: 3rem; */
+}
+.placeholder{
+    position: absolute;
+    top: 2.5rem;
+    left: .8rem;
+    font-size: 1.4rem;
+    padding: 0px .5rem;
+    color: #666;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.input:focus + .placeholder{
+    color: lightslategray;
+    top: 1px;
+    background-color: #fff;
+    font-size: 1rem;
+    padding-top: 1rem;
 }
 .tandc{
     width: 100%;
@@ -1435,10 +1459,14 @@ sup {
     color: black;
 }
 .code{
-    font-size: 1.2rem;
-    color: dodgerblue;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+}
+.code a{
+    font-size: 1.5rem;
+    color: #5d8ed5;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 
