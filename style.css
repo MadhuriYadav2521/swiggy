@@ -1312,6 +1312,151 @@ sup {
     margin-right: .4rem;
 }
 
+/* --------Login Page------------ */
+.login-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.blank-screen{
+    width: 62%;
+    /* border: 1px solid salmon; */
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #282c3f;
+    opacity: .7;
+    overflow: hidden;
+}
+.login-screen{
+    width: 38%;
+    /* border: 1px solid violet; */
+    left: auto;
+    right: 0;
+    position: fixed;
+}
+.login-container{
+    width: 80%;
+    margin: 3rem 7rem auto auto;
+    /* border: 1px solid sienna; */
+}
+.close-screen{
+    width: 100%;
+    /* border: 1px solid salmon; */
+    margin: auto;
+}
+.close-screen i{
+    font-size: 1.4rem;
+    color: #171a29;
+    margin-bottom: 2rem;
+}
+.login-header{
+    width: 100%;
+    /* border: 1px solid salmon; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: auto; */
+}
+.l-header-left{
+    width: 70%;
+}
+.l-header-right{
+    width: 30%;
+}
+.l-img{
+    width: 100%;
+}
+.l-img img{
+    width: 100%;
+}
+.close-screen i{
+    font-size: 2.4rem;
+}
+.l-header-left .big-txt{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.l-header-left h4 a{
+    color: #fc8019;
+    letter-spacing: 0.02rem;
+}
+.submit-btn{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.submit-btn a{
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    padding: 0 2rem;
+    color: #fc8019;
+    letter-spacing: 0;
+    color: #fff;
+    background-color: #fc8019;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+
+}
+
+.login-inputs input{
+    border: 1px solid #d4d5d9;
+    padding: 0;
+    display: block;
+    position: relative;
+    transform: translateZ(0);
+    width: 100%;
+    padding: 2rem ;
+    font-size: 1.3rem;
+    outline: none;
+}
+.login-inputs{
+    width: 100%;
+    /* margin-bottom: 2rem; */
+    /* margin-top: 3rem; */
+}
+.tandc{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.tandc span{
+    color: black;
+}
+.code{
+    font-size: 1.2rem;
+    color: dodgerblue;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
