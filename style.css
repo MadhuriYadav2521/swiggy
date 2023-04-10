@@ -1948,6 +1948,7 @@ sup {
     width: 100%;
     border: 1px solid salmon;
     padding: 2.5rem;
+    background-color: #fff;
 }
 .cart-bill-header{
     width: 100%;
@@ -2032,10 +2033,53 @@ sup {
 .c-p-qty span:nth-child(1) i{
     color: black;
 }
+.suggestion{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+.suggestion h1{
+    width: 10%;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: end;
+}
+.suggestion input{
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: gray;
+    /* padding: 1rem; */
+    outline: none;
+    border: none;
+    background-color: #f9f9f9;
 
-
-
-
+}
+.opt-section{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border: 1px solid gray;
+    margin-top: 1.5rem;
+}
+.opt-check {
+    width: 10%;
+    /* border: 1px solid black; */
+    
+}
+.opt-check input{
+    background-color: green;
+    border: none;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.opt-note{
+    width: 89%;
+}
 
 
 
