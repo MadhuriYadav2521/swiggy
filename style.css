@@ -1478,7 +1478,7 @@ sup {
 
 .login-container {
     width: 80%;
-    margin: 3rem 7rem auto auto;
+    margin: 3rem auto auto auto;
     /* border: 1px solid sienna; */
 }
 
@@ -1752,7 +1752,7 @@ sup {
 .cart-inner-container {
     width: 85%;
     margin: 2rem auto 0rem auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: #e4e7e9;
     display: flex;
     justify-content: space-between;
@@ -1778,12 +1778,12 @@ sup {
 
 .cart-left {
     width: 66%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .cart-right {
     width: 32%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .c-delivery-address {
@@ -1886,7 +1886,8 @@ sup {
 }
 .payment-method .cart-title{
     color: gray;
-    padding: 1rem;
+    /* padding: 0rem; */
+    font-size: 1.4rem;
 }
 .payment-method .cart-title:hover{
     color: black;
@@ -1904,7 +1905,7 @@ sup {
 }
 .payment-method i{
     color: gray;
-    font-size: 2rem;
+    font-size: 1.4rem;
     padding: 1rem;
 }
 .payment-method i:hover{
@@ -1946,7 +1947,7 @@ sup {
 }
 .cart-bill{
     width: 100%;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     padding: 2.5rem;
     background-color: #fff;
 }
@@ -1970,7 +1971,7 @@ sup {
 }
 .c-product-name{
     width: 77%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .cart-bill-body{
     width: 100%;
@@ -2065,6 +2066,7 @@ sup {
     padding: 1.5rem;
     border: 1px solid gray;
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 .opt-check {
     width: 10%;
@@ -2080,18 +2082,108 @@ sup {
 .opt-note{
     width: 89%;
 }
+.opt-note .cart-subtitle{
+    text-transform: none;
+    padding: none;
+    margin: none;
+}
+.opt-note .cart-content{
+    line-height: 1.7rem;
+}
+.cart-coupon-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px dashed gray;
+    cursor: pointer;
+}
+.cart-coupon-section a{
+    color: black;
+}
+.cart-coupon-section  i{
+    width: 5%;
+    font-size: 1.5rem;
+    color: black;
+}
+.cart-coupon-section p {
+    width: 90%;
+    color: black;
+}
+.cart-bill-details{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.c-bill-table{
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.c-bill-table table{
+    width: 100%;
+}
+.c-bill-table .cart-content td:nth-child(1){
+    
+    width: 80%;
+    /* border: 1px solid salmon; */
+}
+.c-bill-table .cart-content td:nth-child(2){
 
-
-
-
-
-
-
-
-
-
-
-
+    width: 20%;
+    /* border: 1px solid salmon; */
+    text-align: right;
+}
+.c-bill-table .cart-subtitle td:nth-child(2){
+     width: 20%;
+    /* border-top: 2px solid black; */
+    text-align: right;
+    padding: 1rem 0rem;
+}
+table {
+    border-collapse: collapse;
+  }
+td{
+    padding: .8rem;
+}
+.c-bill-table tr:nth-child(4) {
+    border-top: 2px solid black;
+}
+.c-bill-table .cart-content:nth-child(3) {
+    border-top: 1px solid lightgray;
+}
+.policy-note{
+    width: 100%;
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+}
+.policy-note-container{
+    width: 95%;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: .3rem;
+    padding: 1.5rem;
+}
+.policy-note-container .cart-title{
+    line-height: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+.policy-note-container .cart-content span{
+    color: rgb(243, 47, 47);
+}
+.policy-note-container .cart-content {
+    margin-bottom: 1.5rem;
+}
+.policy-note-container .cart-subtitle a{
+    text-transform: none;
+    font-size: 1.5rem;
+    color: rgb(243, 47, 47);
+    border-bottom: 1px dotted red;
+    width: auto;
+    cursor: pointer;
+    font-weight: 600;
+}
 
 
 
