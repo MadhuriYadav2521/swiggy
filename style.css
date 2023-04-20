@@ -1544,7 +1544,7 @@ sup {
     margin-bottom: 1rem;
 }
 
-.submit-btn a {
+.submit-btn input {
     width: 100%;
     text-decoration: none;
     cursor: pointer;
@@ -1597,9 +1597,12 @@ sup {
     color: #666;
     transition: 0.3s;
     pointer-events: none;
+    transform-origin: 0% 0%;
 }
 
-.input:focus+.placeholder {
+.input:focus+.placeholder ,
+.input:valid+.placeholder
+{
     color: lightslategray;
     top: 1px;
     background-color: #fff;
