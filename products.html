@@ -50,7 +50,7 @@
                         <li>
                             <a href="./login.html">
                                 <i class="fa-regular fa-user"></i>
-                                <span>Sign In</span>
+                                <span id="switch">Sign In</span>
                             </a>
                         </li>
                         <li>
@@ -510,6 +510,31 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <script>
+        window.onload = function(){
+            // alert("working")
+            var currentUser = JSON.parse(localStorage.getItem("swiggyCurrentUser"))
+            // console.log(currentUser,"currentUser");
+            if(!!currentUser){
+                // alert(currentUser.namee)
+                var divFromHtml = document.getElementById("switch");
+                // console.log(divFromHtml,"divFromHtml");
+                // var h1 = document.createElement("h1");
+                // h1.innerText = "madhuri"
+                // divFromHtml.append(h1)
+                var name = `<span> ${currentUser.namee}</span>`;
+                divFromHtml.innerHTML = name;
+            }else{
+                alert("current user absent")
+            }
+        }
+    </script>
+
+    
 </body>
 
 </html>

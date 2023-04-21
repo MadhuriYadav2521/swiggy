@@ -2188,7 +2188,56 @@ td{
     font-weight: 600;
 }
 
+.input_wrap input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border: .1rem solid lightgray;
+    height: 6rem;
+    width: 100%;
+    color: #000000;
+    font-size: 1.4rem;
+    padding-left: 2rem;
+    box-shadow: none;
+}
 
+
+.input_wrap input:focus+label,
+input:valid+label {
+    font-size: 1.2rem;
+    color: gray;
+    top: -.5rem;
+    left: 1rem;
+    background: #ffffff;
+    padding: 0px .5rem 0px .5rem;
+}
+
+.input_wrap {
+    width: auto;
+    height: auto;
+    position: relative;
+ 
+}
+
+.input_wrap label {
+    font-size: 1.6rem;
+    color: gray;
+    padding: 1.4rem;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    pointer-events: none;
+    font-weight: normal;
+
+}
+
+.input_wrap input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+}
 
 
 
