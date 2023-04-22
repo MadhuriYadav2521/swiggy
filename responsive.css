@@ -2,6 +2,7 @@
     html {
         font-size: 60%;
     }
+
     .sp-container {
         width: 75%;
         margin: 6.7% auto 0rem auto;
@@ -73,6 +74,7 @@
     html {
         font-size: 39%;
     }
+
     .nav-text {
         width: 55%;
     }
@@ -106,7 +108,7 @@
     .content-3 .big-txt {
         font-size: 3.2rem;
     }
-    
+
     .nav-state {
         width: auto;
     }
@@ -116,11 +118,11 @@
     html {
         font-size: 35%;
     }
-    
-.cart-inner-container {
-    width: 92%;
 
-}
+    .cart-inner-container {
+        width: 92%;
+
+    }
 }
 
 @media screen and (max-width:630px) {
@@ -135,101 +137,92 @@
     .nav-state {
         width: auto;
     }
-    .login-screen{
+
+    .login-screen {
         width: 50%;
     }
-    .blank-screen{
+
+    .blank-screen {
         width: 50%;
     }
 }
+
 @media screen and (max-width:600px) {
     html {
         font-size: 50%;
     }
-    .left-content{
+
+    .left-content {
         width: 100%;
     }
-    .right-content{
+
+    .right-content {
         display: none;
     }
-    .login-screen{
+
+    .login-screen {
         width: 100%;
     }
-    .blank-screen{
+
+    .blank-screen {
         display: none;
     }
+
     .services {
         flex-direction: column;
     }
-    .service{
+
+    .service {
         width: 50%;
     }
+
     .cart-inner-container {
         width: 90%;
         margin: 2rem auto 0rem auto;
         flex-direction: column;
         justify-content: space-between;
-    
+
     }
+
     .cart-right {
         width: 100%;
         /* border: 1px solid black; */
     }
-    .cart-left{
+
+    .cart-left {
         width: 100%;
     }
-    .nav-text{
+
+    .nav-text {
         width: 70%;
     }
-.cart-nav-wrapper .right-nav{
-    width: 30%;
-}
+
+    .cart-nav-wrapper .right-nav {
+        width: 30%;
+    }
     
+
+
 }
 
 @media screen and (max-width:528) {
     html {
         font-size: 50%;
     }
-    .nav-text{
+
+    .nav-text {
         width: 100%;
     }
-    .nav-text h1{
+
+    .nav-text h1 {
         width: 100%;
     }
-    .cart-nav-wrapper .navbar .left-nav{
+
+    .cart-nav-wrapper .navbar .left-nav {
         width: 80%;
     }
-    .cart-screen .right-nav{
+
+    .cart-screen .right-nav {
         width: 20%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
