@@ -59,6 +59,10 @@
                                 <span>Cart</span>
                             </a>
                         </li>
+                        <li id="logout">
+                            
+
+                        </li>
                     </ul>
                 </div>
 
@@ -521,16 +525,29 @@
             // console.log(currentUser,"currentUser");
             if(!!currentUser){
                 // alert(currentUser.namee)
+                var logoutDiv = document.getElementById("logout");
+                
                 var divFromHtml = document.getElementById("switch");
                 // console.log(divFromHtml,"divFromHtml");
                 // var h1 = document.createElement("h1");
                 // h1.innerText = "madhuri"
                 // divFromHtml.append(h1)
+                var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <span><button onclick="logout() ">Logout</button></span>'
+
                 var name = `<span> ${currentUser.namee}</span>`;
                 divFromHtml.innerHTML = name;
-            }else{
-                alert("current user absent")
+                logoutDiv.innerHTML = button;
+
             }
+            // else{
+            //     alert("current user absent")
+            // }
+        }
+
+        function logout() {
+            alert("We will miss you..")
+            localStorage.removeItem("swiggyCurrentUser");
+            window.location.reload();
         }
     </script>
 

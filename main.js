@@ -69,7 +69,7 @@ function login(event){
 
             localStorage.setItem("swiggyCurrentUser",JSON.stringify(currentUser))
             alert("login successful")
-            window.location.href="./products.html"
+            window.location.href="./multiple-products.html"
         }else{
             alert("credentials not matched")
         }
@@ -78,3 +78,36 @@ function login(event){
     }
    
 }
+
+
+function addProduct(event) {
+    event.preventDefault();
+    // alert("Product adding....")
+    var proName = document.getElementById("pname").value;
+    var proPrice = document.getElementById("pprice").value;
+    var proImage = document.getElementById("pimage").value;
+    var product = { proName, proPrice, proImage };
+
+    var LS = JSON.parse(localStorage.getItem("swiggyProducts")) || [];
+    LS.push(product);
+    localStorage.setItem("swiggyProducts", JSON.stringify(LS));
+
+    alert("Product Added Successfully.")
+    document.getElementById("pname").value = "";
+    document.getElementById("pprice").value = "";
+    document.getElementById("pimage").value = "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

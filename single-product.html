@@ -49,7 +49,7 @@
                         <li>
                             <a href="./login.html">
                                 <i class="fa-regular fa-user"></i>
-                                <span>Sign In</span>
+                                <span id="switch">Sign In</span>
                             </a>
                         </li>
                         <li>
@@ -57,6 +57,10 @@
                                 <i class="fa-solid fa-inbox"></i>
                                 <span>Cart</span>
                             </a>
+                        </li>
+                        <li id="logout">
+                            
+
                         </li>
                     </ul>
                 </div>
@@ -265,7 +269,7 @@
                     Navi Mumbai</div>
             </div>
         </div>
-        <button class="browse-menu-btn"><i class="fa-solid fa-utensils"></i>browse menu</button>
+        <a class="browse-menu-btn" href="./cart.html"><i class="fa-solid fa-utensils"></i>browse menu</a>
         <div class="footer-section">
             <div class="primary-info">
                 <div class="f-info-item">
@@ -370,6 +374,42 @@
             </div>
         </div>
     </div>
+
+    
+
+
+    <script>
+        window.onload = function(){
+            // alert("working")
+            var currentUser = JSON.parse(localStorage.getItem("swiggyCurrentUser"))
+            // console.log(currentUser,"currentUser");
+            if(!!currentUser){
+                // alert(currentUser.namee)
+                var logoutDiv = document.getElementById("logout");
+                
+                var divFromHtml = document.getElementById("switch");
+                // console.log(divFromHtml,"divFromHtml");
+                // var h1 = document.createElement("h1");
+                // h1.innerText = "madhuri"
+                // divFromHtml.append(h1)
+                var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <span><button onclick="logout() ">Logout</button></span>'
+
+                var name = `<span> ${currentUser.namee}</span>`;
+                divFromHtml.innerHTML = name;
+                logoutDiv.innerHTML = button;
+
+            }
+            // else{
+            //     alert("current user absent")
+            // }
+        }
+
+        function logout() {
+            alert("We will miss you..")
+            localStorage.removeItem("swiggyCurrentUser");
+            window.location.reload();
+        }
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order food online from India's best food delivery service.</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="https://kit.fontawesome.com/8cfedbae53.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="admin-nav-wrapper">
+            <div class="navbar">
+                <div class="left-nav">
+                    <div class="nav-logo">
+                        <a href="./index.html"><img src="./img/s-logo.png" alt="logo"></a>
+
+                    </div>
+                    <div class="nav-location">
+                        <span class="nav-city">Welcome Admin</span>
+                    </div>
+                </div>
+                <div class="right-nav">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span><i class="fa-solid fa-magnifying-glass"></i>
+                                    Product Master</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-certificate"></i>
+                                <span>Content</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-regular fa-life-ring"></i>
+                                <span>E-Commerce</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./login.html">
+                                <i class="fa-regular fa-user"></i>
+                                <span id="switch">Reports</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="add-product-container">
+            <form action="" onsubmit="addProduct(event)">
+                <h1 class="admin-panel-title">add product</h1>
+                <div class="input_wrap">
+                    <input type="text" id="pname" required  autocomplete="off"/>
+                    <label>Enter Product Name</label>
+                </div>
+                <div class="input_wrap">
+                    <input type="text" id="pprice" required autocomplete="off" />
+                    <label>Enter Price</label>
+                </div>
+                <div class="input_wrap">
+                    <input type="text" id="pimage" required  autocomplete="off"/>
+                    <label>Enter Image URL</label>
+                </div>
+                <!-- <div class="input_wrap">
+                    <input type="password"  id="userConfirmPassword" required  autocomplete="off"/>
+                    <label>Confirm password</label>
+                </div> -->
+
+                <div class="submit-btn">
+                    <input type="submit" name="" id="" value="Add Product">
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
