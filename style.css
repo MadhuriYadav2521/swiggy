@@ -1147,6 +1147,11 @@ sup {
     align-items: center;
 
 }
+.delivery-time-info ul li:nth-child(2){
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+}
 
 .delivery-time-info .sp-title {
     font-size: 1.4rem;
@@ -1165,8 +1170,9 @@ sup {
 .delivery-time-info li:nth-child(2) i {
     border: 2px solid #3d4152;
     border-radius: 100%;
-    padding: .3rem .5rem .3rem .5rem;
+    padding: .4rem .7rem .4rem .7rem;
     font-size: 1rem;
+    vertical-align: middle;
 }
 
 .product-offer-section {
