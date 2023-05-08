@@ -36,26 +36,26 @@
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa-solid fa-certificate"></i>
-                                <span>Offers<sup>New</sup></span>
+                                <span><i class="fa-solid fa-certificate"></i>
+                                Offers<sup>New</sup></span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fa-regular fa-life-ring"></i>
-                                <span>Help</span>
+                                <span><i class="fa-regular fa-life-ring"></i>
+                                Help</span>
                             </a>
                         </li>
                         <li>
                             <a href="./login.html">
-                                <i class="fa-regular fa-user"></i>
-                                <span id="switch">Sign In</span>
+                                <span id="switch"><i class="fa-regular fa-user"></i>
+                                Sign In</span>
                             </a>
                         </li>
                         <li>
                             <a href="./cart.html">
-                                <i class="fa-solid fa-inbox"></i>
-                                <span>Cart</span>
+                                <span><i class="fa-solid fa-inbox"></i>
+                                Cart</span>
                             </a>
                         </li>
                         <li id="logout">
@@ -394,7 +394,7 @@
                 // divFromHtml.append(h1)
                 var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <span><button onclick="logout() ">Logout</button></span>'
 
-                var name = `<span> ${currentUser.namee}</span>`;
+                var name = `<i class="fa-regular fa-user"></i><span> ${currentUser.namee}</span>`;
                 divFromHtml.innerHTML = name;
                 logoutDiv.innerHTML = button;
 
@@ -415,7 +415,7 @@
             var structure = `<img src='${product.proImage}' class="got-image" />`
             var productName = `${product.proName}`
             var productPrice = `${product.proPrice}`
-            var addToCart = `<button onclick='addCart()'>Add to cart</button>`                
+            var addToCart = `<button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button>`                
 
             console.log(structure, "here");
             divToAppendProduct.innerHTML = structure;
@@ -429,8 +429,8 @@
             localStorage.removeItem("swiggyCurrentUser");
             window.location.reload();
         }
-        function addCart() {
-            alert("Adding to cart")
+        function addCart(product) {
+            // alert("Adding to cart")
             var currentUser = JSON.parse(localStorage.getItem("swiggyCurrentUser"))
             // console.log(currentUser.email);
             var userData = JSON.parse(localStorage.getItem("swiggyUsers"))

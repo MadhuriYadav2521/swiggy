@@ -14,33 +14,34 @@
 
 <body>
     <div class="cart-screen">
-        <div class="cart-nav-wrapper">
+        <div class="dynamic-cart-nav-wrapper">
             <div class="navbar">
                 <div class="left-nav">
                     <div class="nav-logo">
                         <a href="./index.html"><img src="./img/s-logo.png" alt="logo"></a>
-
                     </div>
-                    <div class="nav-text">
-                        <h1>secure checkout</h1>
+                    <div class="nav-location">
+                        <span class="nav-city">SECURE CHECKOUT</span>
+                        <!-- <span class="nav-state"> Navi Mumbai, Maharashtra, India</span>
+                        <span class="l-icon"><i class="fa-solid fa-angle-down"></i></span> -->
                     </div>
                 </div>
                 <div class="right-nav">
                     <ul>
                         <li>
                             <a href="">
-                                <i class="fa-regular fa-life-ring"></i>
-                                <span>Help</span>
+                                <span><i class="fa-regular fa-life-ring"></i>
+                                Help</span>
                             </a>
                         </li>
                         <li>
-                            <a href="./sign-up.html">
-                                <i class="fa-regular fa-user"></i>
-                                <span id="switch">Sign In</span>
+                            <a href="./login.html">
+                                <span id="switch"><i class="fa-regular fa-user"></i>
+                                Sign In</span>
                             </a>
                         </li>
                         <li id="logout">
-                            
+
 
                         </li>
                     </ul>
@@ -124,42 +125,33 @@
                 </div>
                 <div class="cart-right">
                     <div class="cart-bill">
-                        <div class="cart-bill-header">
-                            <div class="c-b-img">
-                                <img src="./img/cart product.jpg" alt="">
+                        <div class="cart-bill-header" id="finalcart">
+                            <div class="cart-product-info">
+                                <div class="c-b-img" id="productImage">
+                                </div>
+                                <div class="c-product-name">
+                                    <div class="cart-title" id="productName"></div>
+                                    <div class="cart-content">Vashi</div>
+                                </div>
                             </div>
-                            <div class="c-product-name">
-                                <div class="cart-title">Little Dessert Hut</div>
-                                <div class="cart-content">Vashi</div>
-                            </div>
-                        </div>
-                        <div class="cart-bill-body">
                             <div class="cart-product-list">
                                 <div class="cart-product">
                                     <div class="c-p-type">
                                         <img src="./img/veg.png" alt="">
                                     </div>
-                                    <div class="cart-right-content c-p-name">Cherry Choco Milkshake</div>
+                                    <div class="cart-right-content c-p-name" id="productName"></div>
                                     <div class="cart-right-content c-p-qty">
                                         <span><i class="fa-solid fa-minus"></i></span>
                                         <span>1</span>
                                         <span><i class="fa-solid fa-plus"></i></span>
                                     </div>
-                                    <div class="cart-right-content c-p-price">₹199</div>
+                                    <div class="cart-right-content c-p-price" id="productPrice"></div>
                                 </div>
-                                <!-- <div class="cart-product">
-                                    <div class="c-p-type">
-                                        <img src="./img/veg.png" alt="">
-                                    </div>
-                                    <div class="cart-right-content c-p-name">Chocochips chocolate Milkshake</div>
-                                    <div class="cart-right-content c-p-qty">
-                                        <span><i class="fa-solid fa-minus"></i></span>
-                                        <span>1</span>
-                                        <span><i class="fa-solid fa-plus"></i></span>
-                                    </div>
-                                    <div class="cart-right-content c-p-price">₹199</div>
-                                </div> -->
+
                             </div>
+                        </div>
+                        <div class="cart-bill-body">
+
                             <div class="suggestion">
                                 <h1>&ldquo;</h1>
                                 <input type="text" placeholder="Any suggestions? We will pass it on...">
@@ -205,7 +197,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="policy-note">
                         <div class="policy-note-container">
                             <div class="cart-title">
@@ -328,18 +320,18 @@
     </div>
 
 
-    
+
 
 
     <script>
-        window.onload = function(){
+        window.onload = function () {
             // alert("working")
             var currentUser = JSON.parse(localStorage.getItem("swiggyCurrentUser"))
             // console.log(currentUser,"currentUser");
-            if(!!currentUser){
+            if (!!currentUser) {
                 // alert(currentUser.namee)
                 var logoutDiv = document.getElementById("logout");
-                
+
                 var divFromHtml = document.getElementById("switch");
                 // console.log(divFromHtml,"divFromHtml");
                 // var h1 = document.createElement("h1");
@@ -347,7 +339,7 @@
                 // divFromHtml.append(h1)
                 var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <span><button onclick="logout() ">Logout</button></span>'
 
-                var name = `<span> ${currentUser.namee}</span>`;
+                var name = `<i class="fa-regular fa-user"></i><span> ${currentUser.namee}</span>`;
                 divFromHtml.innerHTML = name;
                 logoutDiv.innerHTML = button;
 
@@ -355,6 +347,66 @@
             // else{
             //     alert("current user absent")
             // }
+            // var currentUser = JSON.parse(localStorage.getItem("tanishqCurrentUser"))
+            var userData = JSON.parse(localStorage.getItem("swiggyUsers"))
+            var divToAppendProductImage = document.getElementById("productImage")
+            var divToAppendProductName = document.getElementById("productName")
+            var divToAppendProductPrice = document.getElementById("productPrice")
+            var divToAppendAllProducts = document.getElementById("finalcart")
+
+            var products;
+            for (var i = 0; i < userData.length; i++) {
+                if (currentUser.useremail == userData[i].useremail) {
+                    products = userData[i].cartProducts;
+                }
+            }
+            console.log(products, "products here");
+            // var finalData = "";
+
+            var finalProductImage = "";
+            var finalProductName = "";
+            var finalProductPrice = "";
+            var finalProductCart = "";
+
+            for (var i = 0; i < products.length; i++) {
+
+                // finalProductImage += `<div> <img src='${products[i].proImage}'/></div>`;
+                // finalProductName += `${products[i].proName}`;
+                // finalProductPrice += `₹${products[i].proPrice}`;
+
+                finalProductCart += `<div class="cart-product-info">
+                                <div class="c-b-img" id="productImage">
+                                    <img src=' ${products[i].proImage}'/>
+                                </div>
+                                <div class="c-product-name">
+                                    <div class="cart-title" id="productName"> ${products[i].proName}</div>
+                                    <div class="cart-content">Vashi</div>
+                                </div>
+                            </div>
+                            <div class="cart-product-list">
+                                <div class="cart-product">
+                                    <div class="c-p-type">
+                                        <img src="./img/veg.png" alt="">
+                                    </div>
+                                    <div class="cart-right-content c-p-name" id="productName"> ${products[i].proName}</div>
+                                    <div class="cart-right-content c-p-qty">
+                                        <span><i class="fa-solid fa-minus"></i></span>
+                                        <span>1</span>
+                                        <span><i class="fa-solid fa-plus"></i></span>
+                                    </div>
+                                    <div class="cart-right-content c-p-price" id="productPrice">₹${products[i].proPrice} </div>
+                                </div>
+
+                            </div>`
+
+            }
+            // divToAppendProducts.innerHTML = finalData;
+
+            divToAppendProductImage.innerHTML = finalProductImage;
+            divToAppendProductName.innerHTML = finalProductName;
+            divToAppendProductPrice.innerHTML = finalProductPrice;
+            divToAppendAllProducts.innerHTML = finalProductCart;
+
         }
 
         function logout() {

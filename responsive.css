@@ -86,6 +86,14 @@
         align-items: start;
         
     }
+    .dynamic-cart-nav-wrapper .right-nav {
+        width: 35%;
+        margin: 0 auto;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .slider-section {
         margin-top: 11rem;
         width: 100%;
@@ -198,7 +206,14 @@
     html {
         font-size: 55%;
     }
-
+    .dynamic-cart-nav-wrapper .right-nav {
+        width: 80%;
+        margin: 0 auto;
+        /* border: 1px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .left-content {
         width: 100%;
     }
