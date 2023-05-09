@@ -209,7 +209,7 @@
                         <button id="singleProduct">
                             <!-- <img src="" alt="" > -->
                         </button>
-                        <div class="add-product" id="forAddToCart"></div>
+                        <div id="forAddToCart"></div>
                     </div>
                 </div>
                 <hr class="fo-hr">
@@ -415,7 +415,8 @@
             var structure = `<img src='${product.proImage}' class="got-image" />`
             var productName = `${product.proName}`
             var productPrice = `${product.proPrice}`
-            var addToCart = `<button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button>`                
+            var addToCart = `<button onclick='addCart(${JSON.stringify(product)})'>Add to cart</button>` 
+               
 
             console.log(structure, "here");
             divToAppendProduct.innerHTML = structure;

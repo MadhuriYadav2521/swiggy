@@ -958,7 +958,7 @@ sup {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     /* border: 1px solid salmon; */
     background-color: #fff;
     box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .15);
@@ -1383,6 +1383,8 @@ sup {
     width: 15%;
     /* border: 1px solid salmon; */
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
     /* height: 10rem; */
 }
 
@@ -1399,21 +1401,41 @@ sup {
 }
 
 .add-product {
-    width: auto;
-    margin: -3rem auto 0rem 2rem;
+    width: 100%;
+    /* margin: -3rem auto 0rem 2rem; */
     border: 0.5px solid #d3d3d3;
     border-radius: .5rem;
     padding: 1rem 2.7rem;
-    z-index: 1;
+    /* z-index: 1; */
     text-transform: uppercase;
-    position: absolute;
+    /* position: absolute; */
     font-size: 1.2rem;
     font-weight: bold;
     background-color: #fff;
     color: green;
     cursor: pointer;
+    text-align: center;
 }
+#forAddToCart button{
+    width: 100%;
+    /* margin: -3rem auto 0rem rem; */
+    border: 0.5px solid #d3d3d3;
+    border-radius: .5rem;
+    padding: 1rem 1.7rem;
+    /* z-index: 1; */
+    text-transform: uppercase;
+    /* position: absolute; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #fff;
+    color: green;
+    cursor: pointer;
+    text-align: center;
+}
+#forAddToCart button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 
+}
 .add-product:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 
@@ -1464,7 +1486,7 @@ sup {
 }
 
 .browse-menu-btn {
-    width: 10%;
+    width: auto;
     border: none;
     border-radius: 5rem;
     background: #5d8ed5;
@@ -1849,9 +1871,11 @@ sup {
     width: 20%;
     /* border: 1px solid black; */
 }
-
+.c-product-name .cart-title{
+    line-height: normal;
+}
 .cart-title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #171a29;
     font-weight: 700;
     line-height: 2.8rem;
@@ -2016,10 +2040,13 @@ sup {
 }
 .c-b-img{
     width: 20%;
+    height: 100%;
     /* border: 1px solid black; */
 }
 .c-b-img img{
     width: 100%;
+    height: 100%;
+
 }
 .c-product-name{
     width: 77%;
@@ -2039,7 +2066,7 @@ sup {
     justify-content: space-between;
     align-items: start;
     padding: .8rem 0rem;
-    border-bottom: 1px solid gray;
+    border-bottom: .1rem solid lightgray;
     
 }
 .c-p-type{
@@ -2069,8 +2096,7 @@ sup {
 .cart-right-content{
     font-size: 1.3rem;
     color: #3d4152;
-    font-weight: 500;
-    line-height: 2rem;
+    /* line-height: 2rem; */
 }
 .c-p-qty span{
     width: 33%;
@@ -2359,12 +2385,6 @@ input[type="password"]:focus {
     flex-wrap: wrap;
 }
 
-
-
-/* .product-wrapper{
-    width: 24%;
-    height: 100%;
-} */
 .dynamic-products-section a {
     width: 23.5%;
     /* height: 100%; */

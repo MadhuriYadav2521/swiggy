@@ -38,25 +38,25 @@
                         <li>
                             <a href="">
                                 <span><i class="fa-solid fa-certificate"></i>
-                                Offers<sup>New</sup></span>
+                                    Offers<sup>New</sup></span>
                             </a>
                         </li>
                         <li>
                             <a href="">
                                 <span><i class="fa-regular fa-life-ring"></i>
-                                Help</span>
+                                    Help</span>
                             </a>
                         </li>
                         <li>
                             <a href="./login.html">
                                 <span id="switch"><i class="fa-regular fa-user"></i>
-                                Sign In</span>
+                                    Sign In</span>
                             </a>
                         </li>
                         <li>
                             <a href="./cart.html">
                                 <span><i class="fa-solid fa-inbox"></i>
-                                Cart</span>
+                                    Cart</span>
                             </a>
                         </li>
                         <li id="logout">
@@ -98,8 +98,26 @@
             </div>
         </div>
 
-        <div class="dynamic-products-section" id="products">
-            <a ></a>
+        <div class="dynamic-products-section" id="productContainer">
+            <a>
+                <div class="product">
+                    <div class="product-img" id="productImg">
+                        <div class="ribbon-pop">PROMOTED</div>
+                        <img src="./img/p1.jpg" alt="">
+                    </div>
+                    <div class="ptoduct-name" id="productName"></div>
+                    <div class="product-category">Home Food, North Indian, Thalis</div>
+                    <div class="info-wrapper">
+                        <div class="rating"><i class="fa-solid fa-star"></i>4.4</div>
+                        <div class="dot">.</div>
+                        <div class="time">21 MINS</div>
+                        <div class="dot">.</div>
+                        <div class="price" id="productPrice"></div>
+                    </div>
+                    <div class="offer-info"><i class="fa-solid fa-certificate"></i>30% off | Use TRYNEW</div>
+                    <div class="overlayy"><button>quick view</button></div>
+                </div>
+            </a>
         </div>
 
 
@@ -212,14 +230,14 @@
 
 
     <script>
-        window.onload = function(){
+        window.onload = function () {
             // alert("working")
             var currentUser = JSON.parse(localStorage.getItem("swiggyCurrentUser"))
             // console.log(currentUser,"currentUser");
-            if(!!currentUser){
+            if (!!currentUser) {
                 // alert(currentUser.namee)
                 var logoutDiv = document.getElementById("logout");
-                
+
                 var divFromHtml = document.getElementById("switch");
                 // console.log(divFromHtml,"divFromHtml");
                 // var h1 = document.createElement("h1");
@@ -237,19 +255,51 @@
             // }
 
 
-            var divToShowProducts = document.getElementById("products");
-            var finalData = "";
+            var divToShowProductImg = document.getElementById("productImg");
+            var divToShowProductName = document.getElementById("productName");
+            var divToShowProductPrice = document.getElementById("productPrice");
+            // ₹ 150 for two
+            var divToShowAllProduct = document.getElementById("productContainer");
+            // var finalData = "";
+            var finalImg = "";
+            var finalName = "";
+            var finalPrice = "";
+            var finalContainer = "";
 
             var productsFromLS = JSON.parse(localStorage.getItem("swiggyProducts"))
             for (var i = 0; i < productsFromLS.length; i++) {
-                finalData += `<a  onclick='redirect(${JSON.stringify(productsFromLS[i])})'>
-                            <img src=${productsFromLS[i].proImage} /><div class="g-pro-name">${productsFromLS[i].proName}</div>
-                            <div class="g-pro-price">₹  ${productsFromLS[i].proPrice}</div></a>`;
+                // finalData += `<a  onclick='redirect(${JSON.stringify(productsFromLS[i])})'>
+                //             <img src=${productsFromLS[i].proImage} /><div class="g-pro-name">${productsFromLS[i].proName}</div>
+                //             <div class="g-pro-price">₹  ${productsFromLS[i].proPrice}</div></a>`;
+
+                finalContainer += ` <a onclick='redirect(${JSON.stringify(productsFromLS[i])})'>
+                <div class="product">
+                    <div class="product-img" id="productImg">
+                        <div class="ribbon-pop">PROMOTED</div>
+                        <img src=${productsFromLS[i].proImage}>
+                    </div>
+                    <div class="ptoduct-name" id="productName">${productsFromLS[i].proName}</div>
+                    <div class="product-category">Home Food, North Indian, Thalis</div>
+                    <div class="info-wrapper">
+                        <div class="rating"><i class="fa-solid fa-star"></i>4.4</div>
+                        <div class="dot">.</div>
+                        <div class="time">21 MINS</div>
+                        <div class="dot">.</div>
+                        <div class="price" id="productPrice">₹ ${productsFromLS[i].proPrice} for two</div>
+                    </div>
+                    <div class="offer-info"><i class="fa-solid fa-certificate"></i>30% off | Use TRYNEW</div>
+                    <div class="overlayy"><button>quick view</button></div>
+                </div>
+            </a>`;
             }
 
             // console.log(finalData, "finalData here")
 
-            divToShowProducts.innerHTML = finalData;
+            // divToShowProducts.innerHTML = finalData;
+            divToShowProductImg.innerHTML = finalImg;
+            divToShowProductName.innerHTML = finalName;
+            divToShowProductPrice.innerHTML = finalPrice;
+            divToShowAllProduct.innerHTML = finalContainer;
 
 
         }
@@ -259,7 +309,7 @@
             localStorage.removeItem("swiggyCurrentUser");
             window.location.reload();
         }
-        
+
         function redirect(product) {
             var singleProduct = JSON.stringify(product);
             // console.log(s, " s here")
@@ -269,7 +319,7 @@
         }
     </script>
 
-    
+
 </body>
 
 </html>
