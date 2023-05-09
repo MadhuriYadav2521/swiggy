@@ -180,6 +180,13 @@
     .sm-containar{
         width: 60%;
     }
+    .cart-container {
+        width: 100%;
+        margin: 10.5% auto 0rem auto;
+        border: 1px solid transparent;
+        background-color: #e4e7e9;
+    
+    }
 }
 
 @media screen and (max-width:793px) {
@@ -535,6 +542,13 @@
     }
     .sm-containar{
         width: 85%;
+    }
+    .cart-container {
+        width: 100%;
+        margin: 14% auto 0rem auto;
+        border: 1px solid transparent;
+        background-color: #e4e7e9;
+    
     }
 }
 
